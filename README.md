@@ -5,37 +5,36 @@ DataCamp DA Associate SQL Sample Practical
 PetMind, a U.S.-based pet product retailer, sells a mix of luxury and everyday items, like toys and food. To boost sales, they’ve been focusing on increasing repeat purchases over the past year and now seek a report on how these repeat purchases affect sales.
 
 ## Data
-========= picture 1 ======
+![](Images/1.PNG)
 
-### Task 1 :
+### Task 1 : 
 Make sure the data is cleaned to match Criteria.
 
-**Initial Checks:**
-========= picture 2 ======
+#### Initial Checks
+![](Images/2.PNG)
 
 **Observations:**
 *    There are '-' in category 
 *    There are different case size for text in size Eg. medium , MEDIUM , Medium
 *    some rows in price is 'unlisted'
 *    There are nulls in rating column
-
-Check that Primary Key is unique and do not contain nulls 
-========= picture 3 ======
-
+<br><br>
+#### Check that Primary Key is unique and do not contain nulls <br>
+![](Images/3.png)
+<br>
 **Observations:**
 Primary Key is unique and do not contain nulls
-
-Check numeric columns datatypes to see if casting is required
-========= picture 4 ======
-
-Check there are no negative values in price
-======== pricture 7 =====
+<br><br>
+#### Check numeric columns datatypes
+![](Images/4.PNG)
+#### Check there are no negative values in price
+![](Images/7.PNG)
 
 **Observations:**
 *    Price is text datatype , correction needed cast to numeric
 *    There are no negative values in Price
 
-**Clean Data**
+#### Clean Data
 *    REPLACE '-', ' ' as NULL in category then COALESCE as 'Unknown'
 *    COALESCE nulls and 'Unknown' (this is just in case there was undetected nulls)
 *    Prices have to be numeric 2 DP. Missing values should be replaced with 0.
@@ -43,14 +42,14 @@ Check there are no negative values in price
 *    Ratings are from 1-10. COALESCE nulls as 0
 After completing above steps data would meet the set criteria. Data can be exported at this point to do further analysis or visualizations with other tools
 
-========= picture 5 ======
+![](Images/5.PNG)
 
 ### Task 2 :
 You want to show whether sales are higher for repeat purchases for different animals. You also want to give a range for the sales.
 Write a query to return the animal, repeat_purchase indicator and the avg_sales, along with the min_sales and max_sales. All values should be rounded to whole numbers.
 *You should use the original pet_supplies data for this task.*
 
-========= picture 6 ======
+![](Images/6.PNG)
 
 **Observations:**
 *    The highest average sales for repeat purchases is for birds followed by dogs then cats
@@ -63,7 +62,7 @@ The management team want to focus on efforts in the next year on the most popula
 Write a query to return the product_id, sales and rating for the relevant products.
 *You should use the original pet_supplies data for this task.*
 
-============= picture 8 ===============
+![](Images/8.PNG)
 
 **Observations:**
 *    Data is filtered to show only repeat purchases fpr Dogs and Cat
